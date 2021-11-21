@@ -1,7 +1,7 @@
 Sailpoint Identity IQ Dockerized
 ================================
 # Prerequisites
-
+.
 
 
 # Description
