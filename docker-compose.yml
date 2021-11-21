@@ -1,0 +1,37 @@
+version: '2'
+services:
+  db:
+    image: mariadb:latest
+    ports: 
+      - "3306:3306"
+    volumes:
+      - 'mariadbdata:/var/lib/mysql'
+    environment:
+      - MYSQL_USER=identityiq
+      - MYSQL_PASSWORD=identityiq
+      - MYSQL_DATABASE=identityiq
+      - MYSQL_ROOT_PASSWORD=password
+  iiq:
+    build: ./build
+    ports:
+      - "8080:8080"
+      - "9009:8009"
+    environment:
+      - MYSQL_USER=identityiq
+      - MYSQL_PASSWORD=identityiq
+      - MYSQL_DATABASE=identityiq
+      - MYSQL_ROOT_PASSWORD=password
+    depends_on:
+      - db
+    volumes:
+      # Replace {LOCAL_DIRECTORY} with the path to the directory
+      # that will contain pwcid zip files
+      #- /mnt/c/Users/slemons002/git/pwc_identity_iiq/pwcid/iiq-xml-config/target:/opt/tomcat/pwcid
+      - iiqapp:/opt/tomcat/webapps/identityiq
+ 
+volumes:
+    mariadbdata:
+        driver: local
+    iiqapp:
+        driver: local
+
