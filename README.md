@@ -1,19 +1,18 @@
 Sailpoint Identity IQ Dockerized
 ================================
 # Prerequisites
+.
 
-IdentityIQ 8.0 has been provided in the src directory. The database creation scripts have been modified to work with MariaDB.
-Do not upload this container outside of PwC.
 
 # Description
-Oracle JDK 8 and Tomcat 8 based docker container.
+Adopt Open JDK 8 and Tomcat 9 based docker container.
 Inspired by dodorka/tomcat 
             steffensperling/sailpoint-iiq
 
 
 Includes:
 
- - Oracle JDK 1.8
+ - Adopt Open JDK 1.8
  - Tomcat 8.5
  - mariadb database
  
