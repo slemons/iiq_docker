@@ -13,7 +13,7 @@ Inspired by dodorka/tomcat
 Includes:
 
  - Adopt Open JDK 1.8
- - Tomcat 8.5
+ - Tomcat 9
  - mariadb database
  
 ## Docker
