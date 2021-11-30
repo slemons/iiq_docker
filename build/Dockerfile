@@ -1,4 +1,7 @@
-FROM tomcat:9.0.52-jdk8-adoptopenjdk-hotspot
+#FROM tomcat:8.5-jre8
+FROM tomcat:jdk8-adoptopenjdk-hotspot
+
+MAINTAINER Steffen Sperling <steffen.sperling@ventum.com>
 
 ENV TOMCAT_VERSION 8.5.29
 ENV IIQ_VERSION 8.1

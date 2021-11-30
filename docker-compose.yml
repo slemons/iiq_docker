@@ -13,6 +13,7 @@ services:
       - MYSQL_ROOT_PASSWORD=password
   iiq:
     build: ./build
+    #image: gxzu2appscr005.azurecr.io/iiq:latest
     ports:
       - "8080:8080"
       - "9009:8009"
@@ -26,7 +27,7 @@ services:
     volumes:
       # Replace {LOCAL_DIRECTORY} with the path to the directory
       # that will contain pwcid zip files
-      #- /mnt/c/Users/slemons002/git/pwc_identity_iiq/pwcid/iiq-xml-config/target:/opt/tomcat/pwcid
+      - /mnt/c/Users/slemons002/git/pwc_identity_iiq/pwcid/iiq-xml-config/target:/opt/tomcat/pwcid
       - iiqapp:/opt/tomcat/webapps/identityiq
  
 volumes:
