@@ -1,18 +1,16 @@
-FROM tomcat:9.0.52-jdk8-adoptopenjdk-hotspot
+FROM tomcat:9.0.75-jdk17-corretto
 
-ENV TOMCAT_VERSION 8.5.29
-ENV IIQ_VERSION 8.1
-ENV IIQ_PATCH_VERSION=8.1p3
+ENV TOMCAT_VERSION 9.0.75
+ENV IIQ_VERSION 8.3
+ENV IIQ_PATCH_VERSION=8.3p2
 
 # Fix sh
 # RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # Install dependencies
-RUN apt-get update && \
-apt-get install -y apt-utils wget unzip tar mysql-client
+RUN yum update -y && \
+yum install -y yum-utils wget unzip tar mysql
 
-# Define commonly used JAVA_HOME variable
-# ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Move the default image location to the one this is expecting
 RUN mv /usr/local/tomcat /opt/tomcat
@@ -54,4 +52,3 @@ WORKDIR /opt/tomcat
 
 # Launch IIQ
 CMD ["/entrypoint.sh", "run"]
-#CMD ["/opt/tomcat/bin/catalina.sh", "run"]
