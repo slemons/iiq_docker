@@ -1,0 +1,259 @@
+dn: dc=example,dc=com
+o: My Company
+objectclass: organization
+objectclass: dcObject
+
+dn: ou=People,dc=example,dc=com
+ou: People
+objectclass: organizationalUnit
+objectclass: top
+
+dn: ou=Groups,dc=example,dc=com
+ou: Groups
+objectclass: organizationalUnit
+objectclass: top
+
+dn: cn=Yakidoo,ou=Groups,dc=example,dc=com
+cn: Yakidoo
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Kanoodle,ou=Groups,dc=example,dc=com
+cn: Kanoodle
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Brainbox,ou=Groups,dc=example,dc=com
+cn: Brainbox
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Tagopia,ou=Groups,dc=example,dc=com
+cn: Tagopia
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Youtags,ou=Groups,dc=example,dc=com
+cn: Youtags
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Avaveo,ou=Groups,dc=example,dc=com
+cn: Avaveo
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Flipbug,ou=Groups,dc=example,dc=com
+cn: Flipbug
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Jayo,ou=Groups,dc=example,dc=com
+cn: Jayo
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Roombo,ou=Groups,dc=example,dc=com
+cn: Roombo
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Youspan,ou=Groups,dc=example,dc=com
+cn: Youspan
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Quatz,ou=Groups,dc=example,dc=com
+cn: Quatz
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Janyx,ou=Groups,dc=example,dc=com
+cn: Janyx
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Yozio,ou=Groups,dc=example,dc=com
+cn: Yozio
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Aibox,ou=Groups,dc=example,dc=com
+cn: Aibox
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Jaxnation,ou=Groups,dc=example,dc=com
+cn: Jaxnation
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Eamia,ou=Groups,dc=example,dc=com
+cn: Eamia
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Dynabox,ou=Groups,dc=example,dc=com
+cn: Dynabox
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Eabox,ou=Groups,dc=example,dc=com
+cn: Eabox
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Devshare,ou=Groups,dc=example,dc=com
+cn: Devshare
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Yadel,ou=Groups,dc=example,dc=com
+cn: Yadel
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Kamba,ou=Groups,dc=example,dc=com
+cn: Kamba
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Browsecat,ou=Groups,dc=example,dc=com
+cn: Browsecat
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Jaxnation,ou=Groups,dc=example,dc=com
+cn: Jaxnation
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Wikivu,ou=Groups,dc=example,dc=com
+cn: Wikivu
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Mybuzz,ou=Groups,dc=example,dc=com
+cn: Mybuzz
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Zazio,ou=Groups,dc=example,dc=com
+cn: Zazio
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Skiba,ou=Groups,dc=example,dc=com
+cn: Skiba
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Camimbo,ou=Groups,dc=example,dc=com
+cn: Camimbo
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Lazz,ou=Groups,dc=example,dc=com
+cn: Lazz
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Linkbuzz,ou=Groups,dc=example,dc=com
+cn: Linkbuzz
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Brightdog,ou=Groups,dc=example,dc=com
+cn: Brightdog
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Bubbletube,ou=Groups,dc=example,dc=com
+cn: Bubbletube
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Edgeclub,ou=Groups,dc=example,dc=com
+cn: Edgeclub
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Linkbuzz,ou=Groups,dc=example,dc=com
+cn: Linkbuzz
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Browsebug,ou=Groups,dc=example,dc=com
+cn: Browsebug
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Thoughtblab,ou=Groups,dc=example,dc=com
+cn: Thoughtblab
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Edgeclub,ou=Groups,dc=example,dc=com
+cn: Edgeclub
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Riffpedia,ou=Groups,dc=example,dc=com
+cn: Riffpedia
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Skimia,ou=Groups,dc=example,dc=com
+cn: Skimia
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Demimbu,ou=Groups,dc=example,dc=com
+cn: Demimbu
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Jabbersphere,ou=Groups,dc=example,dc=com
+cn: Jabbersphere
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Quatz,ou=Groups,dc=example,dc=com
+cn: Quatz
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Skyba,ou=Groups,dc=example,dc=com
+cn: Skyba
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Minyx,ou=Groups,dc=example,dc=com
+cn: Minyx
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Oozz,ou=Groups,dc=example,dc=com
+cn: Oozz
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Wordware,ou=Groups,dc=example,dc=com
+cn: Wordware
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Devpulse,ou=Groups,dc=example,dc=com
+cn: Devpulse
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Trupe,ou=Groups,dc=example,dc=com
+cn: Trupe
+objectclass: groupOfUniqueNames
+objectclass:top
+
+dn: cn=Tekfly,ou=Groups,dc=example,dc=com
+cn: Tekfly
+objectclass: groupOfUniqueNames
+objectclass:top

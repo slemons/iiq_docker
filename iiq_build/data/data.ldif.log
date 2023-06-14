@@ -1,0 +1,420 @@
+#!RESULT ERROR
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.234
+#!ERROR  [LDAP result code 68 - entryAlreadyExists] The entry dc=example,dc=com cannot be added because an entry with that name already exists
+dn: dc=example,dc=com
+o: My Company
+objectclass: organization
+objectclass: dcObject
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.243
+dn: ou=People,dc=example,dc=com
+ou: People
+objectclass: organizationalUnit
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.247
+dn: ou=Groups,dc=example,dc=com
+ou: Groups
+objectclass: organizationalUnit
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.252
+dn: cn=Yakidoo,ou=Groups,dc=example,dc=com
+cn: Yakidoo
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.257
+dn: cn=Kanoodle,ou=Groups,dc=example,dc=com
+cn: Kanoodle
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.262
+dn: cn=Brainbox,ou=Groups,dc=example,dc=com
+cn: Brainbox
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.266
+dn: cn=Tagopia,ou=Groups,dc=example,dc=com
+cn: Tagopia
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.270
+dn: cn=Youtags,ou=Groups,dc=example,dc=com
+cn: Youtags
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.275
+dn: cn=Avaveo,ou=Groups,dc=example,dc=com
+cn: Avaveo
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.280
+dn: cn=Flipbug,ou=Groups,dc=example,dc=com
+cn: Flipbug
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.284
+dn: cn=Jayo,ou=Groups,dc=example,dc=com
+cn: Jayo
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.288
+dn: cn=Roombo,ou=Groups,dc=example,dc=com
+cn: Roombo
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.292
+dn: cn=Youspan,ou=Groups,dc=example,dc=com
+cn: Youspan
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.295
+dn: cn=Quatz,ou=Groups,dc=example,dc=com
+cn: Quatz
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.298
+dn: cn=Janyx,ou=Groups,dc=example,dc=com
+cn: Janyx
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.301
+dn: cn=Yozio,ou=Groups,dc=example,dc=com
+cn: Yozio
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.305
+dn: cn=Aibox,ou=Groups,dc=example,dc=com
+cn: Aibox
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.309
+dn: cn=Jaxnation,ou=Groups,dc=example,dc=com
+cn: Jaxnation
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.313
+dn: cn=Eamia,ou=Groups,dc=example,dc=com
+cn: Eamia
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.317
+dn: cn=Dynabox,ou=Groups,dc=example,dc=com
+cn: Dynabox
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.321
+dn: cn=Eabox,ou=Groups,dc=example,dc=com
+cn: Eabox
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.324
+dn: cn=Devshare,ou=Groups,dc=example,dc=com
+cn: Devshare
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.327
+dn: cn=Yadel,ou=Groups,dc=example,dc=com
+cn: Yadel
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.331
+dn: cn=Kamba,ou=Groups,dc=example,dc=com
+cn: Kamba
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.334
+dn: cn=Browsecat,ou=Groups,dc=example,dc=com
+cn: Browsecat
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT ERROR
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.337
+#!ERROR  [LDAP result code 68 - entryAlreadyExists] The entry cn=Jaxnation,ou=Groups,dc=example,dc=com cannot be added because an entry with that name already exists
+dn: cn=Jaxnation,ou=Groups,dc=example,dc=com
+cn: Jaxnation
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.340
+dn: cn=Wikivu,ou=Groups,dc=example,dc=com
+cn: Wikivu
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.347
+dn: cn=Mybuzz,ou=Groups,dc=example,dc=com
+cn: Mybuzz
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.351
+dn: cn=Zazio,ou=Groups,dc=example,dc=com
+cn: Zazio
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.355
+dn: cn=Skiba,ou=Groups,dc=example,dc=com
+cn: Skiba
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.359
+dn: cn=Camimbo,ou=Groups,dc=example,dc=com
+cn: Camimbo
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.363
+dn: cn=Lazz,ou=Groups,dc=example,dc=com
+cn: Lazz
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.366
+dn: cn=Linkbuzz,ou=Groups,dc=example,dc=com
+cn: Linkbuzz
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.370
+dn: cn=Brightdog,ou=Groups,dc=example,dc=com
+cn: Brightdog
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.373
+dn: cn=Bubbletube,ou=Groups,dc=example,dc=com
+cn: Bubbletube
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.376
+dn: cn=Edgeclub,ou=Groups,dc=example,dc=com
+cn: Edgeclub
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT ERROR
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.379
+#!ERROR  [LDAP result code 68 - entryAlreadyExists] The entry cn=Linkbuzz,ou=Groups,dc=example,dc=com cannot be added because an entry with that name already exists
+dn: cn=Linkbuzz,ou=Groups,dc=example,dc=com
+cn: Linkbuzz
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.382
+dn: cn=Browsebug,ou=Groups,dc=example,dc=com
+cn: Browsebug
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.386
+dn: cn=Thoughtblab,ou=Groups,dc=example,dc=com
+cn: Thoughtblab
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT ERROR
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.388
+#!ERROR  [LDAP result code 68 - entryAlreadyExists] The entry cn=Edgeclub,ou=Groups,dc=example,dc=com cannot be added because an entry with that name already exists
+dn: cn=Edgeclub,ou=Groups,dc=example,dc=com
+cn: Edgeclub
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.392
+dn: cn=Riffpedia,ou=Groups,dc=example,dc=com
+cn: Riffpedia
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.395
+dn: cn=Skimia,ou=Groups,dc=example,dc=com
+cn: Skimia
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.398
+dn: cn=Demimbu,ou=Groups,dc=example,dc=com
+cn: Demimbu
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.401
+dn: cn=Jabbersphere,ou=Groups,dc=example,dc=com
+cn: Jabbersphere
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT ERROR
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.403
+#!ERROR  [LDAP result code 68 - entryAlreadyExists] The entry cn=Quatz,ou=Groups,dc=example,dc=com cannot be added because an entry with that name already exists
+dn: cn=Quatz,ou=Groups,dc=example,dc=com
+cn: Quatz
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.405
+dn: cn=Skyba,ou=Groups,dc=example,dc=com
+cn: Skyba
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.409
+dn: cn=Minyx,ou=Groups,dc=example,dc=com
+cn: Minyx
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.412
+dn: cn=Oozz,ou=Groups,dc=example,dc=com
+cn: Oozz
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.415
+dn: cn=Wordware,ou=Groups,dc=example,dc=com
+cn: Wordware
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.417
+dn: cn=Devpulse,ou=Groups,dc=example,dc=com
+cn: Devpulse
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.420
+dn: cn=Trupe,ou=Groups,dc=example,dc=com
+cn: Trupe
+objectclass: groupOfUniqueNames
+objectclass: top
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:1389
+#!DATE 2023-06-12T08:41:02.423
+dn: cn=Tekfly,ou=Groups,dc=example,dc=com
+cn: Tekfly
+objectclass: groupOfUniqueNames
+objectclass: top

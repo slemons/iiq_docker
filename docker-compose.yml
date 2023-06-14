@@ -11,8 +11,9 @@ services:
       - MYSQL_PASSWORD=identityiq
       - MYSQL_DATABASE=identityiq
       - MYSQL_ROOT_PASSWORD=password
+  
   iiq:
-    build: ./build
+    build: ./iiq_build
     ports:
       - "8080:8080"
       - "9009:8009"
@@ -23,15 +24,23 @@ services:
       - MYSQL_ROOT_PASSWORD=password
     depends_on:
       - db
+      - ldap   
     volumes:
       # Replace {LOCAL_DIRECTORY} with the path to the directory
       # that will contain pwcid zip files
       #- /mnt/c/Users/slemons002/git/pwc_identity_iiq/pwcid/iiq-xml-config/target:/opt/tomcat/pwcid
       - iiqapp:/opt/tomcat/webapps/identityiq
- 
+  ldap:
+    image: openidentityplatform/opendj
+    ports:
+      - "1389:1389"
+    volumes:
+      - ldap:/opt/opendj   
 volumes:
     mariadbdata:
         driver: local
     iiqapp:
+        driver: local
+    ldap:
         driver: local
 

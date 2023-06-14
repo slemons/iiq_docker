@@ -13,12 +13,15 @@ if [ -z "${MYSQL_PASSWORD}" ]
 then
 	export MYSQL_PASSWORD=identityiq
 fi
+
 #wait for database to start
 echo "waiting for database on ${MYSQL_HOST} to come up"
 while ! mysqladmin ping -h"${MYSQL_HOST}" -u"${MYSQL_USER}" -p"${MYSQL_PASSWORD}" --silent ; do
 	echo -ne "."
 	sleep 1
 done
+
+
 #check if database schema is already there
 export DB_SCHEMA_VERSION=$(mysql -s -N -hdb -uroot -p${MYSQL_ROOT_PASSWORD} -e "select schema_version from identityiq.spt_database_version;")
 if [ -z "$DB_SCHEMA_VERSION" ]
@@ -35,7 +38,6 @@ then
 else
 	echo "=> Database already set up, version "$DB_SCHEMA_VERSION" found, starting IIQ directly";
 fi
-
 
 # set database host in properties
 sed -ri -e "s/mysql:\/\/localhost/mysql:\/\/${MYSQL_HOST}/" /opt/tomcat/webapps/identityiq/WEB-INF/classes/iiq.properties
@@ -58,5 +60,36 @@ then
 	/opt/tomcat/webapps/identityiq/WEB-INF/bin/iiq patch $IIQ_PATCH_VERSION
 	echo "Done applying patch $IIQ_PATCH_VERSION"
 fi
+
+#wait for the directory server to start
+echo "waiting for directory server to come up"
+while ! ldapsearch -x -LLL -D "cn=Directory Manager" -w password -H ldap://ldap:1389 -s sub -b dc=example,dc=com > /dev/null 2>&1; 
+do
+	echo -ne "."
+	sleep 1
+done
+
+# check if the DIT is already in ldap
+export LDAP_DIT=$(ldapsearch -x -LLL -D "cn=Directory Manager" -w password -H ldap://ldap:1389 -s sub -b dc=example,dc=com '(ou=People)' ou;)
+if [ -z "$LDAP_DIT" ] 
+then
+	echo "No DIT present, importing LDIF"
+	ldapadd -c -x -D "cn=Directory Manager" -w password -H ldap://ldap:1389 -f /tmp/data.ldif
+else
+	echo "=> DIT already imported"
+fi
+
+
+
+export DB_IDENTITIES_EXIST=$(mysql -s -N -hdb -uroot -p${MYSQL_ROOT_PASSWORD} -e "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = 'identities'";)
+if [ -z "$DB_IDENTITIES_EXIST" ]
+then
+	echo "No identities database exists, create database and populating tables"
+	mysql -uroot -p${MYSQL_ROOT_PASSWORD} -hdb < /tmp/data.sql
+
+else
+	echo "=> Database already set up, version "$DB_IDENTITIES_EXIST" found, skipping...."; 
+fi
+
 /opt/tomcat/bin/catalina.sh run
 

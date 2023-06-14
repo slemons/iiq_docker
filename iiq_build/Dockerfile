@@ -9,7 +9,7 @@ ENV IIQ_PATCH_VERSION=8.3p2
 
 # Install dependencies
 RUN yum update -y && \
-yum install -y yum-utils wget unzip tar mysql
+yum install -y yum-utils wget unzip tar mysql openldap-clients
 
 
 # Move the default image location to the one this is expecting
@@ -35,8 +35,10 @@ COPY src/identityiq-${IIQ_PATCH_VERSION}.jar /tmp
 RUN unzip -qo -d /opt/tomcat/webapps/identityiq /tmp/identityiq-${IIQ_PATCH_VERSION}.jar 
 
 COPY index.html /opt/tomcat/webapps/ROOT
-
 COPY Workflow-Importer.xml /opt/tomcat/webapps/identityiq/WEB-INF/config
+
+COPY data/data.ldif /tmp
+COPY data/data.sql /tmp
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
