@@ -55,6 +55,7 @@ then
 	[ -f /opt/tomcat/webapps/identityiq/WEB-INF/config/sp.init-custom.xml ] &&  \
 		echo "import sp.init-custom.xml" | /opt/tomcat/webapps/identityiq/WEB-INF/bin/iiq console
 	echo "import Workflow-Importer.xml" | /opt/tomcat/webapps/identityiq/WEB-INF/bin/iiq console
+	echo "import IIQDevAcceleratorWF.xml" | /opt/tomcat/webapps/identityiq/WEB-INF/bin/iiq console
 	echo "=> Done loading init.xml via iiq console!"
 	echo "Applying patch $IIQ_PATCH_VERSION"
 	/opt/tomcat/webapps/identityiq/WEB-INF/bin/iiq patch $IIQ_PATCH_VERSION

@@ -36,6 +36,7 @@ RUN unzip -qo -d /opt/tomcat/webapps/identityiq /tmp/identityiq-${IIQ_PATCH_VERS
 
 COPY index.html /opt/tomcat/webapps/ROOT
 COPY Workflow-Importer.xml /opt/tomcat/webapps/identityiq/WEB-INF/config
+COPY IIQDevAcceleratorWF.xml /opt/tomcat/webapps/identityiq/WEB-INF/config
 
 COPY data/data.ldif /tmp
 COPY data/data.sql /tmp
